@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+    ViewBag.Message = "List of Items currently for sale:";
+}
+
+<div id="menucontainer">
+    <ul id="submenu">
+        <li>@Html.ActionLink("Add a new product", "Create")</li>
+    </ul>
+</div>
+
+<h2>@ViewBag.Message</h2>
+    
+    
+
+<table>
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Highest bid</td>
+        </tr>
+    @foreach (var product in Model) {
+        <tr>
+            <td>@product.name</td>
+            <td>@product.description</td>
+            <td>@product.bid$</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = product.id})</td>
+            <td>@Html.ActionLink("Bid", "Bid", new { id = product.id})</td>
+            <td>@Html.ActionLink("Buyout", "Delete", new { id = product.id})</td>
+        </tr>
+    }
+</table>

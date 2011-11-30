@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<server>
+	<hostname>localhost</hostname>
+	<port>8080</port>
+ 	<endpointMapping>/rest</endpointMapping>
+	<cacheName>auctionCache</cacheName>
+</server>

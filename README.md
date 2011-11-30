@@ -1,0 +1,2 @@
+To setup the project all you need to do is fill out the information contained in the configuration xml in App_Data.
+Then simply have the edg running containing a cache with the configured cacheName and you're all set.
